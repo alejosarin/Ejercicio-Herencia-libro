@@ -7,9 +7,9 @@ public class Coleccion extends Libro
     //Atributos
     private ArrayList<Libro> coleccion = new ArrayList<Libro>();
     //constructor
-    public Coleccion(String nombre, String autor, int añoEdicion, Boolean edicionLujo,String coleccion)
+    public Coleccion(String nombre, String autor, int añoEdicion, Boolean edicionLujo)
     {
-        super(nombre, autor, añoEdicion, edicionLujo, coleccion);
+        super(nombre, autor, añoEdicion, edicionLujo);
     }
     public void agregarLibro(Libro j)
     {

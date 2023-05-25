@@ -1,24 +1,26 @@
 package modelo;
 
+import java.util.ArrayList;
 
-public class Libro {
+public class Biblioteca {
     
     //atributos
     protected String nombre;
     protected String autor;
     protected int añoEdicion;
     protected Boolean edicionLujo;
-    protected String coleccion;
+    protected ArrayList <Biblioteca> Libros = new ArrayList <Biblioteca>();
+    
    
 
     //constructor
-    public Libro(String nombre, String autor, int añoEdicion, Boolean edicionLujo,String coleccion) 
+    public Biblioteca(String nombre, String autor, int añoEdicion, Boolean edicionLujo) 
     {
         this.nombre = nombre;
         this.autor = autor;
         this.añoEdicion = añoEdicion;
         this.edicionLujo = edicionLujo;
-        this.coleccion = coleccion;
+        
     }
 
 
@@ -57,9 +59,13 @@ public class Libro {
     }
 
 
-    public void setEdicionLujo(Boolean edicionLujo) {
+
+    public void setEdicionLujo(Boolean edicionLujo) 
+    {
         this.edicionLujo = edicionLujo;
     }
+
+   
 
 
     
