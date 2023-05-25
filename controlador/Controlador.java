@@ -3,8 +3,9 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import modelo.Libro;
+import modelo.Biblioteca;
 import vista.VentanaPrincipal;
+import modelo.*;
 
 
 public class Controlador implements ActionListener
@@ -13,7 +14,7 @@ public class Controlador implements ActionListener
     //Atributos
     //----------------------------
     private VentanaPrincipal venPrin;
-    private Libro model;
+    private Biblioteca model;
     
     
     //----------------------------
@@ -21,7 +22,7 @@ public class Controlador implements ActionListener
     //----------------------------
     
     //Constructor
-    public Controlador(VentanaPrincipal pVenPrin, Libro pModel)
+    public Controlador(VentanaPrincipal pVenPrin, Biblioteca pModel)
     {
         this.venPrin = pVenPrin;
         this.model = pModel;
@@ -44,10 +45,12 @@ public class Controlador implements ActionListener
             int añoEdicion = Integer.parseInt(venPrin.miPanelEntradaDatos.getAñoEdicion());
             Boolean lujo = venPrin.miPanelEntradaDatos.getDeLujo();
 
-            Libro nLibro = new Libro(nombreLibro, nombreAutor, añoEdicion, lujo);
+            Libros nLibro = new Libros(nombreLibro, nombreAutor, añoEdicion, lujo);
+            
+            int k;
             
 
-            venPrin.miPanelResultados.mostrarResultado( "Nombre del Libro : " + nLibro.getNombre() + "\nAutor : "+nLibro.getAutor() + "\nAño Edicion :: "+nLibro.getAñoEdicion() + "\nEdicion de lijo  " + (lujo ? "Si" : "No"));
+            venPrin.miPanelResultados.mostrarResultado( "Nombre del Libro : " + nLibro.getNombre() + "\nAutor : "+nLibro.getAutor() + "\nAño Edicion :: "+nLibro.getAñoEdicion() + "\nEdicion de lijo  " + (nLibro.getEdicionLujo()? "Si" : "No"));
 
             
         }

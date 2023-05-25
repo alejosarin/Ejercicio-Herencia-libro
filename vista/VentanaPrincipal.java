@@ -32,7 +32,7 @@ public class VentanaPrincipal extends JFrame
         
         //añadimos panel operaciones
         miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(0, 220, 810, 235);
+        miPanelOperaciones.setBounds(0, 250, 810, 235);
         this.add(miPanelOperaciones);
         
 
@@ -45,7 +45,7 @@ public class VentanaPrincipal extends JFrame
         
         //Caracteristicas de la ventana
         setTitle("Alejandro Salazar Rincon");
-        setSize(830,500);
+        setSize(830,800);
         //setLocation(10,10);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

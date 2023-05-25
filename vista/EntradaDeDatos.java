@@ -67,7 +67,7 @@ public class EntradaDeDatos extends JPanel
 
     //Cajas de texto 
     ckBoton = new JCheckBox();
-    ckBoton.setBounds(150,150,20,20);
+    ckBoton.setBounds(130,150,20,20);
     add(ckBoton);
 
 

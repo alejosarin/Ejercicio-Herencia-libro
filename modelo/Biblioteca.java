@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
 
 public class Biblioteca {
     
@@ -9,19 +8,31 @@ public class Biblioteca {
     protected String autor;
     protected int añoEdicion;
     protected Boolean edicionLujo;
-    protected ArrayList <Biblioteca> Libros = new ArrayList <Biblioteca>();
+    protected String nombreColeccion;
+    protected int numeroColeccion;
+    
     
    
 
     //constructor
+    public Biblioteca(String nombre, String autor, int añoEdicion, Boolean edicionLujo,String nombreColeccion , int numeroColeccion) 
+    {
+        this.nombre = nombre;
+        this.autor = autor;
+        this.añoEdicion = añoEdicion;
+        this.edicionLujo = edicionLujo;
+        this.nombreColeccion = nombreColeccion;
+        this.numeroColeccion = numeroColeccion;
+        
+    }
     public Biblioteca(String nombre, String autor, int añoEdicion, Boolean edicionLujo) 
     {
         this.nombre = nombre;
         this.autor = autor;
         this.añoEdicion = añoEdicion;
         this.edicionLujo = edicionLujo;
-        
     }
+
 
 
     public String getNombre() {
